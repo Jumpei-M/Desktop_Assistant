@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="desktop_assistant.TaskPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="300">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- タスク追加 -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="TaskInput" 
+                     Width="200"
+                     Margin="0,0,10,0"
+                     Background="#FFA5A5A5"
+                     />
+            <Button Content="追加" 
+                    Click="AddTask_Click"
+                    Background="#FFA5A5A5"
+                    />
+        </StackPanel>
+
+        <!-- タスク一覧 -->
+        <ListBox x:Name="TaskList" 
+                 Grid.Row="1"
+                 Background="#FFA5A5A5"
+                 />
+    </Grid>
+</UserControl>
